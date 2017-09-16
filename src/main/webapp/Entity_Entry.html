@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>Netsetos Login Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
+        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+    </head>
+    <body>
+        <div class="container">
+
+            <header>
+                <h1>Entry <span>Page</span></h1>
+            </header>
+            <section>				
+                <div id="container_demo" >
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form  action="room_registration.jsp" autocomplete="on"> 
+                                <h1>Enter info</h1> 
+                                <p> 
+                                    <label for="flooraddress" class="uflooraddress" data-icon="floor_no" > Floor No</label>
+                                    <input id="flooraddress" name="flooraddress" required="required" type="text" placeholder="floor address"/>
+                                </p>
+                                <p> 
+                                    <label for="flataddress" class="uflataddress" data-icon="flat_no" > Flat No</label>
+                                    <input id="flataddress" name="flataddress" required="required" type="text" placeholder="flat address"/>
+                                </p>
+                                <p> 
+                                    <label for="roomaddress" class="uroomaddress" data-icon="room_no" > Room No</label>
+                                    <input id="roomaddress" name="roomaddress" required="required" type="text" placeholder="room address"/>
+                                </p>
+                                <p> 
+                                    <label for="bedno" class="ubedno" data-icon="bed_no" > Bed No</label>
+                                    <input id="bedno" name="bedno" required="required" type="text" placeholder="bed number"/>
+                                </p>
+                                <p class="login button"> 
+                                    <input type="submit" value="Enter" /> 
+								</p>
+                            </form>
+                        </div>
+
+						
+                    </div>
+                </div>  
+            </section>
+        </div>
+    </body>
+</html>

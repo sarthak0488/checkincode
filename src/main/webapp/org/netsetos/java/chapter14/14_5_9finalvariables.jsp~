@@ -1,0 +1,112 @@
+<%@ page language="java" contentType="text/html; charset=US-ASCII" pageEncoding="US-ASCII"%>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../../css/content.css" />
+<jsp:include page="../Header_Java.jsp" />
+</head>
+<div id="menu">
+<ul>
+  <li><a href="../TechnicalViews.jsp">Technical Views</a></li>
+  <li><a href="../funWeDo.html">Fun WE</a></li>
+</ul>
+</div>
+<body>
+<script type="text/javascript" src="../../js/script.js"></script>
+<table>
+<tr>
+<td width=20% height=100% valign="top" bgcolor="#eaeaea">
+<button class="accordion">What Are Threads?</button>
+<div class="panel">
+<p><a href="../chapter14/14_1whatarethreads.jsp">What Are Threads?</a></p></div>
+<button class="accordion">Interrupting Threads</button>
+<div class="panel">
+<p><a href="../chapter14/14_2interruptingthreads.jsp">Interrupting Threads</a></p></div>
+<button class="accordion">Thread States</button>
+<div class="panel">
+<p><a href="../chapter14/14_3threadstates.jsp">Thread States</a></p></div>
+<button class="accordion">Thread Properties</button>
+<div class="panel">
+<p><a href="../chapter14/14_4threadproperties.jsp">Thread Properties</a></p></div>
+<button class="accordion">Synchronization</button>
+<div class="panel">
+<p><a href="../chapter14/14_5synchronization.jsp">Synchronization</a></p><p><a href="../chapter14/14_5_1atomics.jsp">Atomics</a></p>
+<p><a href="../chapter14/14_5_11deadlocks.jsp">Deadlocks</a></p>
+<p><a href="../chapter14/14_5_12threadlocalvariables.jsp">Thread-Local Variables</a></p>
+<p><a href="../chapter14/14_5_13locktestingandtimeouts.jsp">Lock Testing and Timeouts</a></p>
+<p><a href="../chapter14/14_5_14readwritelocks.jsp">Read/Write Locks</a></p>
+<p><a href="../chapter14/14_5_15whythestopandsuspendmethodsaredeprecated.jsp">Why the stop and suspend Methods Are Deprecated</a></p>
+<p><a href="../chapter14/14_5_2theraceconditionexplained.jsp">The Race Condition Explained</a></p>
+<p><a href="../chapter14/14_5_3lockobjects.jsp">Lock Objects</a></p>
+<p><a href="../chapter14/14_5_4conditionobjects.jsp">Condition Objects</a></p>
+<p><a href="../chapter14/14_5_5thesynchronizedkeyword.jsp">The synchronized Keyword</a></p>
+<p><a href="../chapter14/14_5_6synchronizedblocks.jsp">Synchronized Blocks</a></p>
+<p><a href="../chapter14/14_5_7themonitorconcept.jsp">The Monitor Concept</a></p>
+<p><a href="../chapter14/14_5_8volatilefields.jsp">Volatile Fields</a></p>
+<p><a href="../chapter14/14_5_9finalvariables.jsp">Final Variables</a></p>
+</div>
+<button class="accordion">Blocking Queues</button>
+<div class="panel">
+<p><a href="../chapter14/14_6blockingqueues.jsp">Blocking Queues</a></p></div>
+<button class="accordion">Thread-Safe Collections</button>
+<div class="panel">
+<p><a href="../chapter14/14_7threadsafecollections.jsp">Thread-Safe Collections</a></p><p><a href="../chapter14/14_7_1efficientmapssetsandqueues.jsp">Efficient Maps, Sets, and Queues</a></p>
+<p><a href="../chapter14/14_7_2atomicupdateofmapentries.jsp">Atomic Update of Map Entries</a></p>
+<p><a href="../chapter14/14_7_3bulkoperationsonconcurrenthashmaps.jsp">Bulk Operations on Concurrent Hash Maps</a></p>
+<p><a href="../chapter14/14_7_4concurrentsetviews.jsp">Concurrent Set Views</a></p>
+<p><a href="../chapter14/14_7_5copyonwritearrays.jsp">Copy on Write Arrays</a></p>
+<p><a href="../chapter14/14_7_6parallelarrayalgorithms.jsp">Parallel Array Algorithms</a></p>
+<p><a href="../chapter14/14_7_7olderthreadsafecollections.jsp">Older Thread-Safe Collections</a></p>
+</div>
+<button class="accordion">Callables and Futures</button>
+<div class="panel">
+<p><a href="../chapter14/14_8callablesandfutures.jsp">Callables and Futures</a></p></div>
+<button class="accordion">Executors</button>
+<div class="panel">
+<p><a href="../chapter14/14_9executors.jsp">Executors</a></p><p><a href="../chapter14/14_9_1threadpools.jsp">Thread Pools</a></p>
+<p><a href="../chapter14/14_9_2scheduledexecution.jsp">Scheduled Execution</a></p>
+<p><a href="../chapter14/14_9_3controllinggroupsoftasks.jsp">Controlling Groups of Tasks</a></p>
+<p><a href="../chapter14/14_9_4theforkjoinframework.jsp">The Fork-Join Framework</a></p>
+<p><a href="../chapter14/14_9_5completablefutures.jsp">Completable Futures</a></p>
+</div>
+<button class="accordion">Synchronizers</button>
+<div class="panel">
+<p><a href="../chapter14/14_10synchronizers.jsp">Synchronizers</a></p></div>
+<button class="accordion">Threads and Swing</button>
+<div class="panel">
+<p><a href="../chapter14/14_11threadsandswing.jsp">Threads and Swing</a></p><p><a href="../chapter14/14_11_1runningtimeconsumingtasks.jsp">Running Time-Consuming Tasks</a></p>
+<p><a href="../chapter14/14_11_2usingtheswingworker.jsp">Using the Swing Worker</a></p>
+<p><a href="../chapter14/14_11_3thesinglethreadrule.jsp">The Single-Thread Rule</a></p>
+</div>
+
+</td>
+<td>
+<div id="post">
+<h3>Chapter 14 Final Variables</h3>
+<p align = "right"><button type="submit" value="Submit">Mark as Completed</button></p>
+</div>
+</td>
+</tr>
+</table>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+</script>
+
+</body>
+<a href="../chapter14/14_5_8volatilefields.jsp"> << Previous</a>
+<a href="../TableOfContentJava.jsp"> TOC </a>
+<a href="../chapter14/14_6blockingqueues.jsp">Next >> </a>
+<jsp:include page="../footer.html" />
+</html>

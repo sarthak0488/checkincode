@@ -1,0 +1,58 @@
+package org.netsetos.sharek;
+
+public class HelloWordAnonymousK {
+	
+	interface HelloWorld {
+		public void greet();
+		public void greetSomeone(String name);
+	}
+	
+	public void sayHello(){
+		
+		HelloWorld hindiGreeting = new HelloWorld(){
+			String name = "Namaste ";
+			public void greet(){
+				greetSomeone(name);
+			}
+			public void greetSomeone(String someone){
+				name = someone; 
+				System.out.println("Namaste "+name);
+			}
+		};
+		
+		class TelguGreeting implements HelloWorld {
+			String name = "chepandi";
+			public void greet(){
+				greetSomeone(name);
+			}
+			public void greetSomeone(String someone){
+				name = someone;
+				System.out.println("Hello "+name);
+			}
+		}
+		
+		HelloWorld telgugreet = new TelguGreeting();
+	
+		HelloWorld urduGreeting  = new HelloWorld() {
+			String name  = "assalaamwaalequm";
+			public void greet(){
+				greetSomeone(name);
+			}
+			public void greetSomeone(String someone){
+				name = someone;
+				System.out.println("Bhai "+name);
+			}
+		};
+		
+		hindiGreeting.greetSomeone("Daroga");
+		telgugreet.greet();
+		urduGreeting.greetSomeone("Tabish");
+	}
+	
+	public static void main(String... args) {
+		HelloWordAnonymousK myApp =
+            new HelloWordAnonymousK();
+        myApp.sayHello();
+    }       
+
+}

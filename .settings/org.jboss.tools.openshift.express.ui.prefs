@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+org.jboss.tools.openshift.ApplicationId=54fa064fe0b8cdbf5f0000ac
+org.jboss.tools.openshift.ApplicationName=netsetos
+org.jboss.tools.openshift.Connection=https\://sarthak.varshney%40outlook.com@
+org.jboss.tools.openshift.DeployFolder=deployments
+org.jboss.tools.openshift.Domain=networksetting
+org.jboss.tools.openshift.RemoteName=origin

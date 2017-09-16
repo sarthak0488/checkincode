@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="3.0"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         metadata-complete="false">
+  <servlet>
+    <servlet-name>DownloadServlet</servlet-name>
+    <servlet-class>org.netsetos.command.DownloadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DownloadServlet</servlet-name>
+    <url-pattern>/DownloadServlet</url-pattern>
+  </servlet-mapping>
+         
+  <servlet>
+    <servlet-name>ConnectionManager</servlet-name>
+    <servlet-class>org.netsetos.command.ConnectionManager</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConnectionManager</servlet-name>
+    <url-pattern>/ConnectionManager</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>UpdateDB</servlet-name>
+    <servlet-class>org.netsetos.command.UpdateDB</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateDB</servlet-name>
+    <url-pattern>/UpdateDB</url-pattern>
+  </servlet-mapping>
+
+
+
+  <servlet>
+    <servlet-name>UpdateNsoAll</servlet-name>
+    <servlet-class>org.netsetos.command.UpdateNsoAll</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateNsoAll</servlet-name>
+    <url-pattern>/UpdateNsoAll</url-pattern>
+  </servlet-mapping>
+
+
+
+
+</web-app>
+
