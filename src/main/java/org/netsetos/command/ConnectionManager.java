@@ -61,13 +61,14 @@ public class ConnectionManager  extends HttpServlet {
 				
 				System.out.println("postdata"+postdata);
 
-			    //Context initialContext = new InitialContext();
-			    //DataSource datasource = (DataSource)initialContext.lookup("java:jboss/datasources/PostgreSQLDS");
-			    //result = datasource.getConnection();
-				response.sendRedirect("EnvSetup.jsp");
+			    Context initialContext = new InitialContext();
+			    DataSource datasource = (DataSource)initialContext.lookup("java:jboss/datasources/PostgreSQLDS");
+			    result = datasource.getConnection();
+				//response.sendRedirect("EnvSetup.jsp");
 				    
 			} catch (Exception ex) {
 				response.sendRedirect("EnvSetup.jsp");
+				ex.printStackTrace();
 			    System.out.println("Exception:  " + ex + ex.getMessage());
 			}
 			finally{
