@@ -49,11 +49,11 @@ public class ConnectionManager  extends HttpServlet {
 				String emailpassword  = "fromemail";
 				System.out.println("email is "+email);
 				
-				String postuser = System.getenv("POSTGRESQL_USER");
+				String postuser = System.getenv("DATABASE_USER");
 				
-				String postpass = System.getenv("POSTGRESQL_PASSWORD");
+				String postpass = System.getenv("DATABASE_PASSWORD");
 				
-				String postdata = System.getenv("POSTGRESQL_DATABASE");
+				String postdata = System.getenv("DATABASE_PASSWORD");
 				
 				System.out.println("postuser"+postuser);
 				
