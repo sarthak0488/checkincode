@@ -8,7 +8,7 @@
 </head>
 <div id="menu">
 <ul>
-  <li><a href="../TechnicalViews.jsp">Technical Views</a></li>
+  <li><a href="../TechnicalViews.jsp">Technicalb Views</a></li>
   <li><a href="../funWeDo.html">Fun WE</a></li>
 </ul>
 </div>
