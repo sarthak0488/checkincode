@@ -48,83 +48,24 @@ public class ConnectionManager  extends HttpServlet {
 				String email = request.getParameter("email") ;
 				String emailpassword  = "fromemail";
 				System.out.println("email is "+email);
+				
+				String postuser = System.getenv("POSTGRESQL_USER");
+				
+				String postpass = System.getenv("POSTGRESQL_PASSWORD");
+				
+				String postdata = System.getenv("POSTGRESQL_DATABASE");
+				
+				System.out.println("postuser"+postuser);
+				
+				System.out.println("postpass"+postpass);
+				
+				System.out.println("postdata"+postdata);
 
-			    Context initialContext = new InitialContext();
-			    DataSource datasource = (DataSource)initialContext.lookup("java:jboss/datasources/PostgreSQLDS");
-			    result = datasource.getConnection();
-
-			    
-			    stmt = result.createStatement() ;
-			    stmte = result.createStatement() ;
-			  
-			    String query = "select * from  netsetos_login where user_name = "+"'"+username+"'"+" and "+ " user_password =" +
-			    				"'" + password + "'" ;
-			    String queryforemail =  "select * from  netsetos_login where user_name = "+"'"+email+"'"+" and "+ " user_password =" +
-	    				"'" + emailpassword + "'" ;
-
-			     rs = stmt.executeQuery(query)  ; 
-			     rsemail = stmte.executeQuery(queryforemail);   
-			    
-	if (email == null) {  
-			     
-			    if (rs.next()) {
-			    	System.out.println("email is  rs "+email);
-			    	String checkUsername = rs.getString(2);
-			    	session.setAttribute("userId", checkUsername);
-			      	if(checkUsername.contains("sarthak") || checkUsername.contains("abhishek")) {
-			      		// findTopicListPerChapter(request,response);
-			      		//findTopicListALLChapter(request,response);
-			      		findTopicList(request,response);
-
-			      		//response.sendRedirect("org/netsetos/java/TableOfContentFromDataBase.jsp");
-			      		response.sendRedirect("org/netsetos/java/TOCFromDataBase.jsp");
-			      	}
-			      	else{
-			      		response.sendRedirect("org/netsetos/java/TableOfContentJava.jsp");	
-			      	}
-			       	
-			       	}else{
-			    	response.sendRedirect("index.html#toregister");
-			    	}
-	}
-			    //------------
-
-	else if  (email != null) {
-					            
-			        if(rsemail.next()){
-			        	// already exists
-			        	System.out.println("email exists");
-			        }
-			        else{
-			        System.out.println("email does not exist");
-			        String insert_query = "insert into netsetos_login (user_name,email,user_password ) values ("
-			        			+"'"+email+"'"+ ","+"'"+email+"'"+","+"'"+emailpassword+"'"+")";
-			        		
-			        		ResultSet rs1 = stmte.executeQuery(insert_query) ;
-			        		if(rs1.next()){
-			        			
-			        		}
-			        	// insert into database	
-			        }
-			    	System.out.println("email is  Email "+email);
-			    	String checkUsername = email;
-			    	session.setAttribute("userId", checkUsername);
-			      	if(checkUsername.contains("sarthkum0488") ) {
-			      		// findTopicListPerChapter(request,response);
-			      		//findTopicListALLChapter(request,response);
-			      		findTopicList(request,response);
-
-			      		//response.sendRedirect("org/netsetos/java/TableOfContentFromDataBase.jsp");
-			      		response.sendRedirect("org/netsetos/java/TOCFromDataBase.jsp");
-			      	}
-			      	else{
-			      		
-			      		response.sendRedirect("org/netsetos/java/TableOfContentJava.jsp");	
-			      	}
-			       	
-			       	}
-
-			    
+			    //Context initialContext = new InitialContext();
+			    //DataSource datasource = (DataSource)initialContext.lookup("java:jboss/datasources/PostgreSQLDS");
+			    //result = datasource.getConnection();
+				response.sendRedirect("EnvSetup.jsp");
+				    
 			} catch (Exception ex) {
 				response.sendRedirect("EnvSetup.jsp");
 			    System.out.println("Exception:  " + ex + ex.getMessage());
